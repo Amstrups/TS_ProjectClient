@@ -20,61 +20,8 @@ body {
   border-radius: 5px;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
 .btn:active {
   transform: scale(0.98);
-}
-
-.task h3 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.add-form {
-  margin-bottom: 40px;
-}
-
-.form-control {
-  margin: 20px 0;
-}
-
-.form-control label {
-  display: block;
-}
-
-.form-control input {
-  width: 100%;
-  height: 40px;
-  margin: 5px;
-  padding: 3px 7px;
-  font-size: 17px;
-}
-
-.form-control-check {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.form-control-check label {
-  flex: 1;
-}
-
-.form-control-check input {
-  flex: 2;
-  height: 20px;
-}
-
-footer {
-  margin-top: 30px;
-  text-align: center;
 }
 
 ul.companyContainer > li {
@@ -169,4 +116,17 @@ ul.optionsList > li > button {
   border: none;
   background: none;
   padding: 4px;
+  cursor: pointer;
+}
+
+.createContainer {
+  padding-top: 20px;
+}
+
+.createContainer > button {
+  cursor: pointer;
+  padding: 4px;
+  width: 100%;
+  font-size: 12px;
+  border-radius: 4px;
 }

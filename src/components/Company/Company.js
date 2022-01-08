@@ -1,28 +1,38 @@
+import React from "react";
 import OwnerCollapsible from "../Owner/OwnerCollapsible";
-import OwnerList from "../Owner/OwnerList";
-import { useState } from "react";
 import CompanyOptionList from "./CompanyOptionList";
 
-export default function Company({ company }) {
-    const [isOpen,setIsOpen] = useState()
+class Company extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      company: props.company,
+    };
 
+    this.rerender = this.rerender.bind(this);
+  }
+  rerender() {
+    this.forceUpdate();
+  }
 
+  render() {
+    const { company } = this.state;
 
     return (
-        <>
+      <>
         <ul className="companyContainer">
-            <li>
-                <h3 className="companyName">{company.name}</h3>
-                
-                </li>             
-            <li><p className="companyCountry">{company.country}</p></li>
+          <li>
+            <h3 className="companyName">{company.name}</h3>
+          </li>
+          <li>
+            <p className="companyCountry">{company.country}</p>
+          </li>
         </ul>
-                <OwnerCollapsible open={false} owners={company.owners} companyId={company.id}/>
-            <CompanyOptionList company={company}/>
-        </>
-
-
-    )
+        <OwnerCollapsible owners={company.owners} companyId={company.id} />
+        <CompanyOptionList company={company} rerender={this.rerender} />
+      </>
+    );
+  }
 }
 
-//<li><OwnerList owners = {company.owners}/></li>
+export default Company;
