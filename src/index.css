@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+ul {
+  list-style-type: none;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -18,6 +22,17 @@ body {
   border: 1px solid steelblue;
   padding: 30px;
   border-radius: 5px;
+}
+
+.modalContainer {
+  max-width: 500px;
+  margin: 30px auto;
+  overflow: auto;
+  min-height: 300px;
+  border: 1px solid steelblue;
+  padding: 30px;
+  border-radius: 5px;
+  background-color: white;
 }
 
 .btn:active {
@@ -69,7 +84,6 @@ ul.innerCompanyContainer {
 }
 
 ul.outerOwnerContainer > li {
-  list-style-type: none;
   border: none;
   display: inline-block;
 }

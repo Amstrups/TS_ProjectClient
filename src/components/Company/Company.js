@@ -1,5 +1,5 @@
 import React from "react";
-import OwnerCollapsible from "../Owner/OwnerCollapsible";
+import OwnerCollapsible from "../owner/OwnerCollapsible";
 import CompanyOptionList from "./CompanyOptionList";
 
 class Company extends React.Component {
@@ -8,9 +8,9 @@ class Company extends React.Component {
     this.state = {
       company: props.company,
     };
-
     this.rerender = this.rerender.bind(this);
   }
+
   rerender() {
     this.forceUpdate();
   }

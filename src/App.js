@@ -1,7 +1,7 @@
 import React from "react";
-import CompanyList from "./components/Company/CompanyList";
+import CompanyList from "./components/company/CompanyList";
 import Header from "./components/Header";
-import { companiesData } from "./components/Company/CompanySampleData";
+import { companiesData } from "./components/company/CompanySampleData";
 
 class App extends React.Component {
   constructor(props) {
