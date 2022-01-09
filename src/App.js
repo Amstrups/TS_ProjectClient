@@ -11,8 +11,10 @@ class App extends React.Component {
     };
   }
 
+  //Unable to test due to localhosting (CORS)
   /*async componentDidMount() {
-    const response = await fetch("http//localhost:8080/GetCompanies");
+    const response = await fetch("http://localhost:4000/GetCompanies");
+    console.log("Data:", response.json());
     const data = await response.json();
     this.setState({ companies: data.total });
   }*/
